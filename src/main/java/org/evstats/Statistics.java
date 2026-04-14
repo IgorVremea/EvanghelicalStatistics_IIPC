@@ -17,12 +17,7 @@ public class Statistics {
     public int length(){ // returnează cantitatea țărilor
         return countries.size();
     }
-    public ArrayList<String> getRecordById(int id){ // Returnează un array cu țara și statistica ei
-        ArrayList<String> res = new ArrayList<>();
-        res.add(countries.get(id));
-        res.add(statistics.get(id));
-        return res;
-    }
+
     public String getCountryById(int id){ // Returnează țara by id
         return countries.get(id);
     }

@@ -5,8 +5,8 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class PageFormatter {
     private String url;
@@ -60,5 +60,30 @@ public class PageFormatter {
             }
         }
         return null;
+    }
+    public ArrayList<Country> getCountriesList(ArrayList<String> countries){ // Scoate toate statisticile de pe situri
+        System.out.println("Collecting data for:"); // am pus ca să văd tot proces
+        ArrayList<Country> res = new ArrayList<>();
+        for(String country: countries){
+            try{
+                System.out.println(country);
+                res.add(new Country(country, this.getStats(country)));
+            } catch (Exception e){
+                System.out.println(e.getCause() + " " + e.getMessage());
+                res.add(new Country(country, new HashMap<>()));
+            }
+        }
+        return res;
+    }
+    public HashMap<String, String> getStats(String country) throws Exception { // Scoate intreagă statistica pentru o tara anumită
+        String url = this.url.substring(0, this.url.length()-7) + country + '/';
+        url = url.replace(" ", "-");
+        Document doc = Jsoup.connect(url).get();
+        Elements stats = doc.select("table tbody tr");
+        HashMap<String, String> res = new HashMap<>();
+        for(Element stat: stats){
+            res.put(stat.child(0).text().substring(0, stat.child(0).text().length() - 1), stat.child(1).text());
+        }
+        return res;
     }
 }
