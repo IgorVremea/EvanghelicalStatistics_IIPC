@@ -14,6 +14,21 @@ public class Statistics {
     public String getStatistics(String country){
         return statistics.get(countries.indexOf(country));
     }
+    public int length(){
+        return countries.size();
+    }
+    public ArrayList<String> getRecordById(int id){
+        ArrayList<String> res = new ArrayList<>();
+        res.add(countries.get(id));
+        res.add(statistics.get(id));
+        return res;
+    }
+    public String getCountryById(int id){
+        return countries.get(id);
+    }
+    public String getStatisticsById(int id){
+        return statistics.get(id);
+    }
 
     @Override
     public String toString() {

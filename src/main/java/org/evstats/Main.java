@@ -7,6 +7,7 @@ public class Main {
         try{
             Controller controller = new Controller();
             System.out.println(controller.getStatisticsToString());
+            controller.saveStatisticsToFile("src/main/resources/data/data.csv");
         } catch (Exception e){
             System.out.println(e.getMessage());
         }
