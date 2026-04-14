@@ -33,8 +33,20 @@ public class PageFormatter {
         };
         return stringBuilder.toString();
     }
-//    public ArrayList<Element> getStatisticsList(){
-//        ArrayList<Element> res = new ArrayList<>();
-//
-//    }
+    public ArrayList<Element> getStatisticsList(){
+        ArrayList<Element> res = new ArrayList<>();
+        return res;
+    }
+
+    public String getStatistics(String country) throws Exception{
+        String url = this.url.substring(0, this.url.length()-7) + country + '/';
+        Document doc = Jsoup.connect(url).get();
+        Elements elements = doc.select("table tbody tr");
+        for(Element element: elements){
+            if(element.child(0).text().equals("% Evangelical:") ){
+                return element.child(1).text();
+            }
+        }
+        return null;
+    }
 }
