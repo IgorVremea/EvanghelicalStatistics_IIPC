@@ -19,7 +19,7 @@ public class CSVController {
     public CSVController(String path){
         this(new Statistics(new ArrayList<String>(), new ArrayList<String>()), path);
     }
-    public void saveStatistics(Statistics statistics) {
+    public void saveStatistics(Statistics statistics) { // Salvează statistica trimisa în fișier
         this.statistics = statistics;
         try {
             FileWriter out = new FileWriter(path);

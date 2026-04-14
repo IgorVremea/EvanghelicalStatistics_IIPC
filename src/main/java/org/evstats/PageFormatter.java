@@ -16,10 +16,10 @@ public class PageFormatter {
         this.url = url;
         this.doc = Jsoup.connect(url).get();
     }
-    public ArrayList<String> getCountries(){
+    public ArrayList<String> getCountries(){ // Scoate lista țărilor din site
         return getElementsTextBySelector(".list-group-item");
     }
-    public ArrayList<String> getElementsTextBySelector(String selector){
+    public ArrayList<String> getElementsTextBySelector(String selector){ // Extrage text din elemente cu un selector CSS specific
         ArrayList<String> res = new ArrayList<>();
         Elements elementsList = doc.select(selector);
         for(Element element : elementsList){
@@ -27,7 +27,7 @@ public class PageFormatter {
         };
         return res;
     }
-    public String getElementsTextBySelectorInString(String selector) {
+    public String getElementsTextBySelectorInString(String selector) { // Extrage text din elemente cu un selector CSS specific dar returnează in String
         StringBuilder stringBuilder = new StringBuilder();
         Elements elementsList = doc.select(selector);
         for(Element element : elementsList){
@@ -36,8 +36,8 @@ public class PageFormatter {
         };
         return stringBuilder.toString();
     }
-    public ArrayList<String> getStatisticsList(ArrayList<String> countries){
-        System.out.println("Collecting data for:");
+    public ArrayList<String> getStatisticsList(ArrayList<String> countries){ // Scoate toate statisticile de pe situri
+        System.out.println("Collecting data for:"); // am pus ca să văd tot proces
         ArrayList<String> res = new ArrayList<>();
         for(String country: countries){
             try{
@@ -50,7 +50,7 @@ public class PageFormatter {
         return res;
     }
 
-    public String getStatistics(String country) throws Exception{
+    public String getStatistics(String country) throws Exception{ // Scoate statistica pentru o tara anumită
         String url = this.url.substring(0, this.url.length()-7) + country + '/';
         Document doc = Jsoup.connect(url).get();
         Elements elements = doc.select("table tbody tr");
