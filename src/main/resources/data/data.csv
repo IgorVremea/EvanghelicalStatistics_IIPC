@@ -1,27 +1,37 @@
-ID,Country,Statistics
-0,Albania,0.5 %
-1,Andorra,0.4 %
-2,Austria,0.5 %
-3,Belarus,1.3 %
-4,Belgium,1.2 %
-5,Bosnia and Herzegovina,0 %
-6,Bulgaria,1.9 %
-7,Croatia,0.4 %
-8,Cyprus,0.8 %
-9,Czechia,0.7 %
-10,Denmark,3.5 %
-11,Estonia,4.9 %
-12,Faroe Islands,0 %
-13,Finland,12.1 %
-14,France,1 %
-15,Germany,2.1 %
-16,Gibraltar,2.9 %
-17,Greece,0.4 %
-18,Holy See (Vatican City State),0 %
-19,Hungary,2.8 %
-20,Iceland,3.8 %
-21,Ireland,1.5 %
-22,Italy,1.1 %
-23,Kosovo,0 %
-24,Latvia,7 %
-25,Liechtenstein,0.5 
+Country,Population,% Evangelical
+Albania,"2,772,000",0.5 %
+Andorra,"83,000",0.4 %
+Austria,"9,114,000",0.5 %
+Belarus,"8,998,000",1.3 %
+Belgium,"11,759,000",1.2 %
+Bosnia and Herzegovina,"3,140,000",0.1 %
+Bulgaria,"6,715,000",1.9 %
+Croatia,"3,848,000",0.4 %
+Cyprus,"1,371,000",0.8 %
+Czechia,"10,609,000",0.7 %
+Denmark,"6,003,000",3.5 %
+Estonia,"1,344,000",4.9 %
+Faroe Islands,"56,000",28.8 %
+Finland,"5,623,000",12.1 %
+France,"66,651,000",1 %
+Germany,"84,075,000",2.1 %
+Gibraltar,"40,000",2.9 %
+Greece,"9,939,000",0.4 %
+Holy See (Vatican City State),"1,000",2.5 %
+Hungary,"9,632,000",2.8 %
+Iceland,"398,000",3.8 %
+Ireland,"5,308,000",1.5 %
+Italy,"59,146,000",1.1 %
+Kosovo,"1,674,000",
+Latvia,"1,854,000",7 %
+Liechtenstein,"40,000",0.5 %
+Lithuania,"2,830,000",1.1 %
+Luxembourg,"680,000",0.5 %
+Malta,"545,000",1.3 %
+Moldova,"2,996,000",3.7 %
+Monaco,"38,000",1.2 %
+Montenegro,"633,000",0.1 %
+Netherlands,"18,347,000",4.3 %
+North Macedonia,"1,814,000",0.2 %
+Norway,"5,623,000",8.4 %
+Poland,"38,1

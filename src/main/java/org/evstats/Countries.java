@@ -16,6 +16,10 @@ public class Countries {
         return null;
     }
 
+    public ArrayList<Country> getCountries() {
+        return countries;
+    }
+
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();

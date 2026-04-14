@@ -14,11 +14,14 @@ Proiectul este creat pe Maven. Sunt folosite module:
 ### 1. Controller
 Folosit pentru a gestiona toate modulele/clasele dintr-un proiect și interacțiunile acestora
 
-### 2. Page Formatter
+### 2. PageFormatter
 Folosit pentru procesarea informațiilor de pe site
 
-### 3. Statistics
-Folosit pentru a procesa mai ușor statisticile colectate de pe site
+### 3. Country
+Conține *toate* datele despre țară
 
-### 4. CSVController
+### 4. Countries
+Aceasta este o clasă pentru procesarea datelor țărilor
+
+### 5. CSVController
 Folosit pentru a lucra cu fișierul în care este salvat tabelul de statistici
