@@ -16,6 +16,9 @@ public class PageFormatter {
         this.url = url;
         this.doc = Jsoup.connect(url).get();
     }
+    public ArrayList<String> getCountries(){
+        return getElementsTextBySelector(".list-group-item");
+    }
     public ArrayList<String> getElementsTextBySelector(String selector){
         ArrayList<String> res = new ArrayList<>();
         Elements elementsList = doc.select(selector);
@@ -33,8 +36,17 @@ public class PageFormatter {
         };
         return stringBuilder.toString();
     }
-    public ArrayList<Element> getStatisticsList(){
-        ArrayList<Element> res = new ArrayList<>();
+    public ArrayList<String> getStatisticsList(ArrayList<String> countries){
+        System.out.println("Collecting data for:");
+        ArrayList<String> res = new ArrayList<>();
+        for(String country: countries){
+            try{
+                System.out.println(country);
+                res.add(this.getStatistics(country));
+            } catch (Exception e){
+                res.add(null);
+            }
+        }
         return res;
     }
 
